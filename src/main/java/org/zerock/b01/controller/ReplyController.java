@@ -57,7 +57,7 @@ public class ReplyController {
     }
 
     @ApiOperation(value = "Delte Reply", notes = "DELETE 방식으로 특정 댓글 삭제")
-    @PostMapping(value = "/{rno}")
+    @DeleteMapping(value = "/{rno}")
     public Map<String,Long> remove(@PathVariable("rno") Long rno) {
         replyService.read(rno);
         Map<String,Long> resultMap = new HashMap<>();
